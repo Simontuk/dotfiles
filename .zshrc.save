@@ -1,25 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:'/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
-export PATH=$PATH:'/Users/simonsteiger/anaconda2/bin'
-export PATH=$PATH:'/Users/simonsteiger/anaconda3/bin'
-export PATH=$PATH:'/usr/local/opt/llvm/bin'
-
-
-
-# Export Environmental Variables
-export MALMO_XSD_PATH=~/Playground/Malmo-0.30.0-Mac-64bit_withBoost/Schemas
-
-
-# Add SSH-Keys on reboot
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-  eval `ssh-agent`
-    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-    fi
-    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-    ssh-add -l -K id_rsa id_rsa_old > /dev/null || ssh-add
-
-
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+PATH=$PATH:'/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
 
 PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
@@ -55,6 +36,9 @@ DEFAULT_USER="simonsteiger"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
+alias git='nocorrect git'
+
+
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -89,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='code'
+   export EDITOR='atom'
  else
    export EDITOR='nano'
  fi
@@ -109,12 +93,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## System wide aliases
-alias git='nocorrect git'
-alias RR='R --no-save --quiet --min-vsize=2048M --min-nsize=45M'
-alias config='nocorrect git --git-dir=/Users/simonsteiger/.myconf/ --work-tree=/Users/simonsteiger'
-
-
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -122,3 +100,4 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 
 eval $(thefuck --alias)
+export PATH="/usr/local/opt/llvm/bin:$PATH"
