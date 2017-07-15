@@ -113,12 +113,14 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias git='nocorrect git'
 alias RR='R --no-save --quiet --min-vsize=2048M --min-nsize=45M'
 alias config='nocorrect git --git-dir=/Users/simonsteiger/.myconf/ --work-tree=/Users/simonsteiger'
-
+alias conda='nocorrect conda'
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.custom-zsh/conda-zsh-completion $fpath)
+zstyle ':completion::complete:*' use-cache 1
 
 
 eval $(thefuck --alias)
