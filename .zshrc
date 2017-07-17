@@ -76,7 +76,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cloudapp node npm bower brew osx extract z)
+plugins=(git cloudapp node npm bower brew osx extract wd z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +121,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.custom-zsh/conda-zsh-completion $fpath)
 zstyle ':completion::complete:*' use-cache 1
-
+compinit --yes conda 
 
 eval $(thefuck --alias)
