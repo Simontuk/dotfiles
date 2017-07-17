@@ -3,3 +3,4 @@ channels:
   - anaconda-fusion
   - defaults
   - bioconda
+  
