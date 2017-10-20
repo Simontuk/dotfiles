@@ -115,6 +115,7 @@ alias RR='R --no-save --quiet --min-vsize=2048M --min-nsize=45M'
 alias config='nocorrect git --git-dir=/Users/simonsteiger/.myconf/ --work-tree=/Users/simonsteiger'
 alias conda='nocorrect conda'
 alias less='vimpager'
+alias ls='exa'
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
