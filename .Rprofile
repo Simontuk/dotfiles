@@ -3,3 +3,5 @@ local({
     r["CRAN"] <- "https://cran.cnr.berkeley.edu/"
     options(repos = r)
 })
+
+library("colorout")

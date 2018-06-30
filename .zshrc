@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:'/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
+export PATH=$PATH:'/Users/simonsteiger/julia'
 export PATH=$PATH:'/Users/simonsteiger/anaconda2/bin'
 export PATH=$PATH:'/Users/simonsteiger/anaconda3/bin'
 export PATH=$PATH:'/usr/local/opt/llvm/bin'
@@ -31,6 +31,8 @@ export ZSH=/Users/simonsteiger/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
+
+SPACESHIP_DIR_TRUNC_REPO=false
 
 DEFAULT_USER="simonsteiger"
 
@@ -116,6 +118,8 @@ alias config='nocorrect git --git-dir=/Users/simonsteiger/.myconf/ --work-tree=/
 alias conda='nocorrect conda'
 alias less='vimpager'
 alias ls='exa'
+alias chrome='open -a "Google Chrome"'
+
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
