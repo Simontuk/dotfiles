@@ -4,3 +4,4 @@ channels:
   - defaults
   - bioconda
 
+changeps1: false

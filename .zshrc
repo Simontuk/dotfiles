@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:'/Users/simonsteiger/julia'
-export PATH=$PATH:'/Users/simonsteiger/anaconda2/bin'
-export PATH=$PATH:'/Users/simonsteiger/anaconda3/bin'
+#export PATH=$PATH:'/Users/simonsteiger/anaconda2/bin'
+#export PATH=$PATH:'/Users/simonsteiger/anaconda3/bin'
 export PATH=$PATH:'/usr/local/opt/llvm/bin'
 
 
@@ -10,6 +10,9 @@ export PATH=$PATH:'/usr/local/opt/llvm/bin'
 # Export Environmental Variables
 export MALMO_XSD_PATH=~/Playground/Malmo-0.30.0-Mac-64bit_withBoost/Schemas
 
+
+# Conda related:
+. /Users/simonsteiger/anaconda2/etc/profile.d/conda.sh
 
 # Add SSH-Keys on reboot
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
